@@ -4,10 +4,10 @@ spring:
   profiles:
     active: development
   config:
-    import: optional:configserver:http://localhost:8888,optional:configserver:http://localhost:8889
+    import: optional:configserver:http://localhost:5000,optional:configserver:http://localhost:5001
   cloud:
     config:
-      label: 005-Reactive-services
+      label: main
       #fail-fast: on
       #request-connect-timeout: 10
       #request-read-timeout: 10

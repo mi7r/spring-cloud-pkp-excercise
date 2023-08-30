@@ -27,7 +27,7 @@ public class PaymentProcessor implements PaymentService {
         var paymentValue = calculatePaymentValue(paymentRequest.getValue());
         var payment = createPayment(paymentValue);
         log.info("Payment created " + payment);
-        eventEmitter.emit(new PaymentUpdateEvent(payment.getId(), payment.getStatus()));
+        eventEmitter.performPayment(new PaymentUpdateEvent(payment.getId(), payment.getStatus()));
         return paymentsRepository.save(payment);
     }
 

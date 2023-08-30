@@ -4,6 +4,6 @@ import pl.training.payments.domain.PaymentUpdateEvent;
 
 public interface EventEmitter {
 
-    void emit(PaymentUpdateEvent event);
+    void performPayment(PaymentUpdateEvent event);
 
 }
